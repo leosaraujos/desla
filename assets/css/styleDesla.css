@@ -1,0 +1,27 @@
+html, body {
+	font-family: 'Roboto', sans-serif !important;
+}
+.logoDesla {
+	width: 100%;	
+	margin: 20px auto;
+	display: inline-block;
+	margin-top: 25%;
+	text-align: center;
+}
+.contato {
+	text-align: center;
+}
+.contato a {
+	color: #e61a4c;
+	background: #fff;
+	font-size: 20px;
+	display: inline-block;
+	margin-bottom: 10px;
+	padding: 8px 20px;
+	border-radius: 100px;
+}
+.contato a:hover {
+	text-decoration: none;
+	background: #01aeef;
+	color: #fff;
+}
