@@ -1,4 +1,4 @@
-name: Deploy Quitanda via FTP
+name: Deploy Total do Site
 
 on:
   push:
@@ -20,4 +20,4 @@ jobs:
           protocol: "ftp"
           port: 21
           local-dir: ./
-          server-dir: /public_html/quitanda/
+          server-dir: /public_html/
