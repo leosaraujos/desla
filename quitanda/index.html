@@ -1,2 +1,114 @@
-<h1>Aloo Quitanda</h1>
-<p>lorem ipsum</p>
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <!-- Metadados básicos -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+        <!-- SEO -->
+        <title>Quitanda – Escolha e receba produtos fresquinhos</title>
+        <meta name="description" content="A Quitanda permite que você selecione frutas, legumes e verduras com praticidade e acessibilidade. Faça seu pedido e receba em casa.">
+        <meta name="keywords" content="quitanda, frutas, legumes, verduras, feira, delivery, acessibilidade, site acessível">
+        <meta name="author" content="Desla Creative">
+        <meta name="robots" content="index, follow">
+      
+        <!-- Acessibilidade e boas práticas -->
+        <link rel="canonical" href="https://www.deslacreative.com/quitanda/">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="theme-color" content="#38bdf8">
+      
+        <!-- Open Graph para redes sociais -->
+        <meta property="og:title" content="Quitanda – Selecione seus Itens">
+        <meta property="og:description" content="Escolha produtos fresquinhos com acessibilidade e receba em casa.">
+        <meta property="og:url" content="https://www.deslacreative.com/quitanda/">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://www.deslacreative.com/quitanda/img/og-image.jpg">
+      
+        <!-- Twitter Cards -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Quitanda – Selecione seus Itens">
+        <meta name="twitter:description" content="Uma experiência acessível para montar sua feira com qualidade.">
+        <meta name="twitter:image" content="https://www.deslacreative.com/quitanda/img/og-image.jpg">
+      
+        <!-- Favicon e Web App Icons -->
+        <link rel="icon" type="image/png" sizes="16x16" href="/quitanda/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/quitanda/favicon-32x32.png">
+        <link rel="icon" href="/quitanda/favicon.ico" type="image/x-icon">
+
+        <!-- Apple / iOS -->
+        <link rel="apple-touch-icon" href="/quitanda/apple-touch-icon.png">
+
+        <!-- Android -->
+        <link rel="manifest" href="/quitanda/site.webmanifest">
+
+        <!-- Android Chrome Splash e Homescreen -->
+        <link rel="icon" type="image/png" sizes="192x192" href="/quitanda/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="/quitanda/android-chrome-512x512.png">
+
+      
+        <!-- CSS (com Tailwind embutido ou externo) -->
+        <link rel="stylesheet" href="css/styles.css">
+      </head>
+
+<body class="h-screen bg-gray-100 flex items-center justify-center">
+    <div class="w-full max-w-md h-full flex flex-col bg-white shadow-lg">
+        <!-- Step 1 -->
+        <div id="step1" class="flex-1 overflow-auto p-6">
+            <h2 class="text-2xl font-bold">Boas‑vindas à nossa Quitanda!</h2>
+            <p class="mt-2 text-gray-600 text-sm font-light">
+                Todos os dias, uma nova seleção de produtos fresquinhos pra você.<br>
+        Informe seu nome e descubra o que tem disponível hoje.
+            </p>
+            <div class="mt-6 mb-4">
+                <label for="userName" class="block font-semibold mb-1">Nome completo</label>
+                <input type="text" id="userName" placeholder="Digite seu nome"
+               class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-300" />
+            </div>
+            <div class="mb-6 flex items-center">
+                <input type="checkbox" id="promotionsCheckbox"
+               class="h-4 w-4 text-green-600 border-gray-300 rounded mr-2" />
+                <label for="promotionsCheckbox" class="text-gray-700">
+          Quero receber avisos sobre promoções e novidades no WhatsApp
+        </label>
+            </div>
+            <button id="continueBtn" disabled
+              class="w-full py-3 bg-green-600 text-white font-bold rounded disabled:bg-gray-400">
+        Continuar
+      </button>
+        </div>
+
+        <!-- Step 2 -->
+        <div id="step2" class="flex-1 overflow-auto p-6 hidden">
+            <h2 id="greeting" class="text-2xl font-bold">Olá!</h2>
+            <p class="mt-1 text-gray-600 text-sm font-light">
+                Confira o que temos hoje na nossa quitanda.
+            </p>
+            <div id="itemsContainer" class="mt-4 space-y-3"></div>
+            <hr class="my-6 border-gray-200">
+            <!-- placeholder para dar espaço antes do footer -->
+            <div class="h-40"></div>
+        </div>
+
+        <!-- Footer (fixo na Step 2) -->
+        <div id="footer" class="fixed bottom-0 left-1/2 transform -translate-x-1/2
+                           w-full max-w-md bg-white shadow-inner p-4 hidden">
+            <div id="collapseContainer" class="collapse-header flex justify-between items-center mb-2 font-bold"></div>
+            <div class="selected-items mb-3">
+                <ul id="selectedItemsList" class="space-y-1 max-h-32 overflow-auto"></ul>
+            </div>
+            <div class="border-t border-gray-200 pt-3">
+                <p class="summary text-xl font-bold">
+                    Valor Total: R$<span id="totalValue">0.00</span>
+                </p>
+                <button id="sendProposal" disabled
+                class="mt-3 w-full py-3 bg-blue-600 text-white font-bold rounded disabled:bg-gray-400">
+          Enviar lista
+        </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
